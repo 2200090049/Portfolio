@@ -44,7 +44,12 @@ const client = new ApolloClient({
   }),
   defaultOptions: {
     watchQuery: {
-      fetchPolicy: 'cache-and-network',
+      fetchPolicy: 'cache-first', // Use cache first to reduce requests
+      errorPolicy: 'all',
+    },
+    query: {
+      fetchPolicy: 'cache-first',
+      errorPolicy: 'all',
     },
   },
 });
