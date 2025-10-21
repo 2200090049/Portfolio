@@ -32,7 +32,8 @@ export const AdminProvider = ({ children }) => {
   // Login function
   const login = async (username, password) => {
     try {
-      const response = await fetch('http://localhost:5000/graphql', {
+      const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+      const response = await fetch(`${apiUrl}/graphql`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -89,7 +90,8 @@ export const AdminProvider = ({ children }) => {
   // Register function
   const register = async (username, email, password, secureKey) => {
     try {
-      const response = await fetch('http://localhost:5000/graphql', {
+      const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+      const response = await fetch(`${apiUrl}/graphql`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -156,7 +158,8 @@ export const AdminProvider = ({ children }) => {
     if (!token) return false;
 
     try {
-      const response = await fetch('http://localhost:5000/graphql', {
+      const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+      const response = await fetch(`${apiUrl}/graphql`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

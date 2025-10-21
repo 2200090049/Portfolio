@@ -10,7 +10,7 @@ const Admin = () => {
         <p>Manage your portfolio content</p>
         <div className="admin-notice">
           <p>⚠️ This is a protected admin area. Full admin functionality coming soon!</p>
-          <p>For now, you can use GraphQL playground at http://localhost:5000/graphql</p>
+          <p>For now, you can use the GraphQL playground at /graphql endpoint</p>
         </div>
       </motion.div>
     </div>

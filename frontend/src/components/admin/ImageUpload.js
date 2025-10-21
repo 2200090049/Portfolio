@@ -37,9 +37,10 @@ const ImageUpload = ({
       formData.append('image', file);
       formData.append('portfolioType', portfolioType);
 
+      const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:5000';
       const endpoint = imageType === 'profile' 
-        ? 'http://localhost:5000/api/upload/profile-image'
-        : 'http://localhost:5000/api/upload/cover-image';
+        ? `${apiUrl}/api/upload/profile-image`
+        : `${apiUrl}/api/upload/cover-image`;
 
       const response = await fetch(endpoint, {
         method: 'POST',
@@ -49,7 +50,7 @@ const ImageUpload = ({
       const data = await response.json();
 
       if (data.success) {
-        const fullImagePath = `http://localhost:5000${data.imagePath}`;
+        const fullImagePath = `${apiUrl}${data.imagePath}`;
         setPreview(fullImagePath);
         onUploadSuccess(fullImagePath);
         toast.success(data.message);
@@ -70,9 +71,10 @@ const ImageUpload = ({
     }
 
     try {
+      const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:5000';
       const endpoint = imageType === 'profile'
-        ? `http://localhost:5000/api/upload/profile-image/${portfolioType}`
-        : `http://localhost:5000/api/upload/cover-image/${portfolioType}`;
+        ? `${apiUrl}/api/upload/profile-image/${portfolioType}`
+        : `${apiUrl}/api/upload/cover-image/${portfolioType}`;
 
       const response = await fetch(endpoint, {
         method: 'DELETE'
