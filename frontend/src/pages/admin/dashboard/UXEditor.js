@@ -160,6 +160,7 @@ const UXEditor = () => {
 
     try {
       const token = localStorage.getItem('adminToken');
+      const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:5000';
   const response = await fetch(`${apiUrl}/graphql`, {
         method: 'POST',
         headers: {

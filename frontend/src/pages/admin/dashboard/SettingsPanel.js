@@ -204,6 +204,7 @@ const SettingsPanel = () => {
     setLoading(true);
     try {
       const token = localStorage.getItem('adminToken');
+      const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:5000';
       
       // Save Site Settings
   const settingsResponse = await fetch(`${apiUrl}/graphql`, {
