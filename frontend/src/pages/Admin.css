@@ -1,0 +1,5 @@
+.admin-page { min-height: 100vh; background: #0a0e27; padding: 60px 20px; }
+.admin-container { max-width: 1200px; margin: 0 auto; text-align: center; }
+.admin-container h1 { font-size: 3rem; color: #00ff41; margin-bottom: 20px; }
+.admin-notice { margin-top: 60px; padding: 40px; background: rgba(255,255,255,0.05); border-radius: 20px; border: 2px solid rgba(0,255,65,0.3); }
+.admin-notice p { font-size: 1.2rem; color: rgba(255,255,255,0.8); margin-bottom: 15px; }

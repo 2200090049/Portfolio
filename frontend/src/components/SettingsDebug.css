@@ -1,0 +1,109 @@
+.settings-debug {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999999;
+}
+
+.settings-debug-toggle {
+  background: #1e293b;
+  color: white;
+  border: 2px solid #3b82f6;
+  border-radius: 50px;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);
+  transition: all 0.3s ease;
+}
+
+.settings-debug-toggle:hover {
+  background: #3b82f6;
+  transform: scale(1.05);
+}
+
+.settings-debug-panel {
+  position: fixed;
+  top: 0;
+  right: -600px;
+  width: 550px;
+  height: 100vh;
+  background: #1e293b;
+  color: white;
+  padding: 30px;
+  overflow-y: auto;
+  box-shadow: -5px 0 30px rgba(0, 0, 0, 0.5);
+  transition: right 0.4s ease;
+  z-index: 999998;
+}
+
+.settings-debug-panel.open {
+  right: 0;
+}
+
+.settings-debug-panel h3 {
+  margin: 0 0 25px 0;
+  font-size: 24px;
+  color: #3b82f6;
+  border-bottom: 2px solid #3b82f6;
+  padding-bottom: 10px;
+}
+
+.debug-section {
+  margin-bottom: 25px;
+  background: #0f172a;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 3px solid #3b82f6;
+}
+
+.debug-section h4 {
+  margin: 0 0 12px 0;
+  font-size: 16px;
+  color: #60a5fa;
+}
+
+.debug-section pre {
+  background: #020617;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  overflow-x: auto;
+  margin: 0;
+  color: #94a3b8;
+  font-family: 'Courier New', monospace;
+  line-height: 1.5;
+}
+
+.debug-section details {
+  cursor: pointer;
+}
+
+.debug-section summary {
+  color: #60a5fa;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.debug-section summary:hover {
+  color: #93c5fd;
+}
+
+/* Scrollbar styling */
+.settings-debug-panel::-webkit-scrollbar {
+  width: 8px;
+}
+
+.settings-debug-panel::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+.settings-debug-panel::-webkit-scrollbar-thumb {
+  background: #3b82f6;
+  border-radius: 4px;
+}
+
+.settings-debug-panel::-webkit-scrollbar-thumb:hover {
+  background: #60a5fa;
+}

@@ -1,0 +1,139 @@
+/* BLOG MODAL - GOD MODE STYLING */
+
+.blog-modal-overlay {
+  z-index: 10000;
+}
+
+.blog-modal-container {
+  max-width: 1200px;
+  max-height: 95vh;
+}
+
+.blog-modal-form {
+  max-height: calc(95vh - 180px);
+}
+
+/* Simple Textarea Editor Styling */
+.blog-editor {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 16px;
+  color: #fff;
+  font-size: 15px;
+  font-family: inherit;
+  line-height: 1.6;
+  resize: vertical;
+  min-height: 400px;
+  transition: all 0.3s ease;
+}
+
+.blog-editor:focus {
+  outline: none;
+  border-color: #00d4ff;
+  background: rgba(0, 212, 255, 0.05);
+  box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.1);
+}
+
+.editor-hint {
+  margin-top: 8px;
+  padding: 10px 12px;
+  background: rgba(0, 212, 255, 0.05);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  border-radius: 6px;
+  color: #00d4ff;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+/* Custom Scrollbar for Editor */
+.blog-editor::-webkit-scrollbar {
+  width: 8px;
+}
+
+.blog-editor::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+.blog-editor::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #00d4ff 0%, #0077ff 100%);
+  border-radius: 10px;
+}
+
+/* Read Time Badge */
+.read-time {
+  float: right;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(0, 212, 255, 0.1);
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  border-radius: 6px;
+  padding: 4px 10px;
+  color: #00d4ff;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+/* Image Preview */
+.image-preview {
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  max-width: 400px;
+}
+
+.image-preview img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Form Layout Adjustments for Blog Modal */
+.blog-modal-form .form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.blog-modal-form .checkbox-group {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.blog-modal-form .checkbox-group small {
+  color: #8e8e93;
+  font-size: 13px;
+  margin-left: 30px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .blog-modal-container {
+    max-width: 100%;
+    max-height: 100vh;
+    border-radius: 0;
+  }
+
+  .blog-modal-form {
+    max-height: calc(100vh - 180px);
+  }
+
+  .blog-editor .ql-container {
+    min-height: 300px;
+    max-height: 400px;
+  }
+
+  .blog-editor .ql-editor {
+    min-height: 300px;
+  }
+
+  .read-time {
+    float: none;
+    display: inline-flex;
+    margin-top: 8px;
+  }
+}
