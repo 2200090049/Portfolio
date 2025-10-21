@@ -33,7 +33,11 @@ app.use(helmet({
 // CORS Configuration - must be before other middleware
 const corsOptions = {
   origin: process.env.NODE_ENV === 'production' 
-    ? ['https://portfolio-oij-iota.vercel.app'] 
+    ? [
+        'https://portfolio-oij-iota.vercel.app',
+        'https://portfolio-7qkj0x0xt.vercel.app',
+        /^https:\/\/portfolio-.*\.vercel\.app$/  // Allow all Vercel preview URLs
+      ]
     : ['http://localhost:3000', 'http://localhost:3001'],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
